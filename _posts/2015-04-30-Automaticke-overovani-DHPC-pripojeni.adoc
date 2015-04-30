@@ -1,3 +1,29 @@
 = Automatické ověřování DHPC připojení
 
 Jako operátor chci automaticky ověřovat a nastavit rychlost pro klienty připojující se přes DHCP.
+
+
+== FreeRadius
+Switch posílá v požadavku
+
+	Agent-Remote-Id: {název switche}
+	Agent-Circuit-Id: {port}
+
+Odpověd by měla obsahovat IP adresu.
+
+FreeRadius skrip nastaví rychlost na shaperu pomocí SNMP protokolu.
+
+== Databáze
+Nová `dhcp` tabulka bude obsahovat `service_id, switch_id, port, ip, location_id`. Sloupec `switch_id` je `id` z tabulky `network` (is_switch flag && name končí na '-br').
+
+Databázový view `dhcp_services` bude obsahovat `service_id, dns, port, downlink, uplink, ip, status, location`. Sloupec status bude mít jednu z následujících hodnot: `ACTIVE, DEBTOR, SUSPENDED`.
+
+DHCP switch a port se vážou s přípojným místem (byt). Nová tabulka bude obsahovat adresu a byt přípojného místa. Id přípojného místa budou zapsány v tabulce `dhcp` a `services`. Sloupec pro byt bude textového typu (15 zn., někdy se tam zapisují názvy místností nebo `7A`...).
+
+
+== CRM
+Formulář pro přidávání nových služeb bude doplněn o položku "byt".
+
+DHCP switch se bude vybírat z komba (tabulka network).
+
+U přidávání nových DHCP služeb se bude spolu s uložením (smazáním) návrhu také aktualizována tabulka dhcp. Po uložení/smazání se také povolí/zablokuje DHCP port pomocí protokolu SNMP.
