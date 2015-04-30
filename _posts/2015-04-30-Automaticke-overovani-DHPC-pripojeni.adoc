@@ -1,1 +1,3 @@
 = Automatické ověřování DHPC připojení
+
+Jako operátor chci automaticky ověřovat a nastavit rychlost pro klienty připojující se přes DHCP.
