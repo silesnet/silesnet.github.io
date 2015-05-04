@@ -27,3 +27,5 @@ Formulář pro přidávání nových služeb bude doplněn o položku "byt".
 DHCP switch se bude vybírat z komba (tabulka `network`).
 
 U přidávání nových DHCP služeb se bude spolu s uložením (smazáním) návrhu také aktualizována tabulka `dhcp`. Po uložení/smazání se také povolí/zablokuje DHCP port pomocí protokolu SNMP.
+
+to be continued...
