@@ -4,10 +4,11 @@ host:: nepřihlášený uživatel (ROLE_ANONYMOUS)
 
 uživatel:: příhlášený uživatel (ROLE_USER)
 
-technik:: technik (ROLE_ANONYMOUS)
+technik:: technik (ROLE_USER)
 
-vedoucí:: vedoucí techniků (ROLE_ANONYMOUS)
+vedoucí:: vedoucí techniků (ROLE_TECH_ADMIN)
 
-účetní:: účetní
+administrátor:: administrátor sítě (ROLE_NETWORK_ADMIN)
 
-administrátor:: administrátor sítě (ROLE_ANONYMOUS)
+účetní:: účetní (ROLE_ACCOUNTING)
+
