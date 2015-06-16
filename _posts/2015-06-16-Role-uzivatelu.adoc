@@ -1,0 +1,11 @@
+= Role uživatelů
+
+host:: nepřihlášený uživatel (ROLE_ANONYMOUS)
+
+uživatel:: příhlášený uživatel (ROLE_ANONYMOUS)
+
+technik:: technik (ROLE_ANONYMOUS)
+
+vedoucí:: vedoucí techniků (ROLE_ANONYMOUS)
+
+administrátor:: administrátor sítě (ROLE_ANONYMOUS)
